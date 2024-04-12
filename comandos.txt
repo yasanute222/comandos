@@ -1,0 +1,104 @@
+O Github não possui uma lista de comandos fixos, mas em minha pesquisa eu encontrei mais de 100 comandos, falarei deles e darei uma breve explição:
+
+git init: Inicializa um novo repositório Git localmente.
+git clone [url]: Clona um repositório existente do GitHub para o seu computador.
+git add [file]: Adiciona um arquivo específico ao próximo commit.
+git add .: Adiciona todos os arquivos alterados ao próximo commit.
+git add -A: Adiciona todos os arquivos novos, modificados e excluídos ao próximo commit.
+git commit -m "[mensagem]": Registra as alterações feitas no repositório, com uma mensagem que descreve as alterações.
+git commit -a -m "[mensagem]": Adiciona e faz commit de todos os arquivos alterados no repositório em um único comando.
+git push: Envia as alterações locais para o repositório remoto no GitHub.
+git push [remote] [branch]: Envia as alterações locais para uma branch específica em um repositório remoto.
+git push --tags: Envia todas as tags locais para o repositório remoto.
+git pull: Atualiza o repositório local com as alterações do repositório remoto.
+git pull [remote] [branch]: Atualiza a branch local com as alterações de uma branch específica em um repositório remoto.
+git branch: Lista todas as branches locais no repositório.
+git branch [branchname]: Cria uma nova branch.
+git branch -d [branchname]: Deleta uma branch específica.
+git branch -m [oldbranchname] [newbranchname]: Renomeia uma branch.
+git branch -a: Lista todas as branches locais e remotas.
+git checkout [branch]: Muda para a branch especificada.
+git checkout -b [branchname]: Cria uma nova branch e muda para ela.
+git checkout -b [branchname] [remote]/[branchname]: Cria uma nova branch localmente, acompanhando uma branch remota.
+git checkout -- [file]: Desfaz as alterações não commitadas em um arquivo.
+git merge [branch]: Mescla as alterações da branch especificada na branch atual.
+git merge --abort: Aborta uma mesclagem em caso de conflitos.
+git status: Mostra o estado atual do repositório, incluindo arquivos modificados, arquivos adicionados e o estado da branch.
+git log: Mostra o histórico de commits.
+git log --graph: Mostra o histórico de commits de forma gráfica.
+git log --oneline: Mostra o histórico de commits em uma linha por commit.
+git log --author="[autor]": Filtra o histórico de commits por autor.
+git log --grep="[padrão]": Filtra o histórico de commits por mensagem de commit.
+git log [file]: Mostra o histórico de commits de um arquivo específico.
+git remote -v: Lista todos os repositórios remotos configurados.
+git remote add [name] [url]: Adiciona um novo repositório remoto.
+git remote rm [name]: Remove um repositório remoto.
+git remote rename [oldname] [newname]: Renomeia um repositório remoto.
+git remote set-url [name] [newurl]: Atualiza a URL de um repositório remoto.
+git reset [file]: Desfaz as alterações no arquivo especificado.
+git reset --hard: Desfaz todas as alterações não commitadas no repositório.
+git reset --hard HEAD~1: Desfaz o último commit e reseta o índice para o commit anterior.
+git reset --soft HEAD~1: Desfaz o último commit, mantendo as alterações no diretório de trabalho.
+git reset --mixed HEAD~1: Desfaz o último commit e mantém as alterações no índice.
+git reset --merge ORIG_HEAD: Desfaz uma mesclagem que teve conflitos.
+git reset [commit]: Move o HEAD e a branch atual para o commit especificado.
+git reset --hard [commit]: Move o HEAD e a branch atual para o commit especificado, descartando todas as alterações não commitadas.
+git reset --soft [commit]: Move o HEAD e a branch atual para o commit especificado, mantendo as alterações no diretório de trabalho.
+git reset --mixed [commit]: Move o HEAD e a branch atual para o commit especificado, mantendo as alterações no índice.
+git fetch: Busca as últimas alterações do repositório remoto, mas não as mescla no ramo atual.
+git fetch [remote]: Busca as últimas alterações de um repositório remoto específico.
+git fetch --all: Busca as últimas alterações de todos os repositórios remotos.
+git fetch --tags: Busca todas as tags do repositório remoto.
+git fetch --prune: Remove referências de branches remotas que foram excluídas no repositório remoto.
+git diff: Mostra as diferenças entre os arquivos no diretório de trabalho e o último commit.
+git diff [commit1] [commit2]: Mostra as diferenças entre dois commits.
+git diff [branch1] [branch2]: Mostra as diferenças entre duas branches.
+git diff [file]: Mostra as diferenças de um arquivo entre o diretório de trabalho e o índice.
+git diff --cached [file]: Mostra as diferenças de um arquivo entre o índice e o último commit.
+git diff HEAD [file]: Mostra as diferenças de um arquivo entre o diretório de trabalho e o último commit.
+git tag [tagname]: Cria uma nova tag no último commit.
+git tag -a [tagname] -m "[mensagem]": Cria uma nova tag anotada com uma mensagem.
+git tag -d [tagname]: Deleta uma tag específica.
+git tag: Lista todas as tags.
+git show [tagname]: Mostra as informações de uma tag específica.
+git stash: Guarda as alterações atuais em um stash temporário.
+git stash list: Lista todos os stashes.
+git stash apply: Aplica o stash mais recente ao diretório de trabalho.
+git stash apply [stash_id]: Aplica um stash específico ao diretório de trabalho.
+git stash pop: Aplica o stash mais recente e o remove da lista de stashes.
+git stash drop: Remove o stash mais recente da lista de stashes.
+git stash clear: Limpa todos os stashes.
+git clean -n: Mostra quais arquivos seriam removidos do diretório de trabalho.
+git clean -f: Remove os arquivos não rastreados do diretório de trabalho.
+git clean -f [path]: Remove os arquivos não rastreados de um diretório específico.
+git clean -df: Remove os arquivos não rastreados e os diretórios não rastreados do diretório de trabalho.
+git clean -xdf: Remove todos os arquivos não rastreados e diretórios não rastreados, incluindo os ignorados pelo arquivo .gitignore.
+git config --global user.name "[nome]": Configura o nome do usuário para commits.
+git config --global user.email "[email]": Configura o email do usuário para commits.
+git config --global core.autocrlf [true/false/input]: Configura a conversão automática de quebras de linha para o sistema operacional específico.
+git config --global core.filemode [true/false]: Configura o monitoramento de permissões de arquivo.
+git config --global core.editor "[editor]": Configura o editor de texto padrão para mensagens de commit.
+git config --global alias.[aliasname] "[command]": Configura um alias para um comando Git.
+git cherry-pick [commit]: Aplica as mudanças de um commit específico à branch atual.
+git cherry-pick [commit1] [commit2]: Aplica as mudanças de uma série de commits à branch atual.
+git cherry-pick --abort: Aborta o processo de cherry-pick.
+git cherry-pick --continue: Continua o processo de cherry-pick após resolver conflitos.
+git rebase [branch]: Reaplica commits de uma branch em outra.
+git rebase --continue: Continua o processo de rebase após resolver conflitos.
+git rebase --abort: Aborta o processo de rebase.
+git rebase -i [commit]: Realiza um rebase interativo a partir de um commit específico.
+git rebase -i HEAD~[n]: Realiza um rebase interativo para os últimos n commits.
+git reflog: Mostra o histórico de referências, incluindo movimentos de HEAD e resets.
+git bisect: Ajuda a encontrar um commit específico que introduziu um problema.
+git blame [file]: Mostra quem modificou cada linha de um arquivo e em qual commit.
+git grep [pattern]: Procura por padrões em arquivos rastreados.
+git gc: Limpa objetos não utilizados e otimiza o banco de dados do Git.
+git fsck: Verifica a integridade do banco de dados do Git.
+git archive [branch]: Cria um arquivo zip ou tar de um commit ou branch específica.
+git archive --format=[formato] [branch]: Cria um arquivo no formato especificado (zip, tar, etc.) de um commit ou branch específica.
+git prune: Remove objetos não referenciados do banco de dados do Git.
+git show-branch: Mostra a relação entre branches.
+git instaweb: Inicia um servidor web para visualizar o repositório.
+git instaweb --httpd=[servidor_web]: Especifica um servidor web para o comando git instaweb.
+git help: Exibe a documentação do Git.
+git help [command]: Exibe a documentação de um comando específico do Git.
